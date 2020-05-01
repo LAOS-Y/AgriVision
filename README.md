@@ -2,7 +2,9 @@
 
 ## Data Preparation
 1. Put the compressed dataset file "Agriculture-Vision.tar.gz" in data/
-2. > cd data && tar -xvf Agriculture-Vision.tar.gz
+2. ```
+   cd data && tar -xvf Agriculture-Vision.tar.gz
+   ```
 3. Files in data should look like
     ```
     data
@@ -18,10 +20,14 @@
     ```
 
 ## Train
-> ./train.sh 0,1 29500 config/agri-resnet101dilated-ibn@a-deeplab-low_feat@3-bce+dice+lovasz-aug-warmup@2000.yaml
+```
+./train.sh 0,1 29500 config/agri-resnet101dilated-ibn@a-deeplab-low_feat@3-bce+dice+lovasz-aug-warmup@2000.yaml
+```
 
 ## Test
-> python test.py --cfg config/agri-test.yaml
+```
+python test.py --cfg config/agri-test.yaml
+```
 
 ## Bibtex
 
