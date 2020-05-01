@@ -1,0 +1,49 @@
+DATASET:
+  root_dataset: "data/"
+  list_train: ["./data/agri-trn.odgt"]
+  list_val: "./data/agri-val.odgt"
+  # list_train: ["./data/agri-debug.odgt"]
+  # list_val: "./data/agri-debug.odgt"
+  num_class: 7
+  segm_downsampling_rate: 1.0
+  shift_limit: (-1.0, 1.0)
+  scale_limit: (-1.0, 1.0)
+  aspect_limit: (-1.0, 1.0)
+
+
+MODEL:
+  arch: "deeplab"
+  os: 16
+  backbone: "resnet101"
+  ibn_mode: "a"
+  num_low_level_feat: 3
+
+LOSS:
+  bce: 1.0
+  dice: 1.0
+  lovasz: 1.0
+
+TRAIN:
+  batch_size_per_gpu: 16
+  iter_warmup: 2000
+  iter_static: 8000
+  iter_decay: 20000
+  start_epoch: 0
+  optim: "SGD"
+  lr: 0.01
+  lr_pow: 0.9
+  beta1: 0.9
+  weight_decay: 5e-4
+  deep_sup_scale: 0.4
+  fix_bn: False
+  workers: 12
+  disp_iter: 20
+  seed: 304
+
+VAL:
+  batch_size_per_gpu: 8
+
+TEST:
+  result: "./"
+
+DIR: "ckpt/"

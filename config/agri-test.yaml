@@ -1,0 +1,19 @@
+DATASET:
+  root_dataset: "data/"
+  list_test: "./data/agri-test.odgt"
+  num_class: 7
+  segm_downsampling_rate: 1.0
+
+MODEL:
+  arch: "deeplab"
+  os: 16
+  backbone: "resnet101"
+  ibn_mode: "a"
+  num_low_level_feat: 3
+
+TEST:
+  batch_size_per_gpu: 16
+  checkpoint: "pretrained/ibn101a-deeplab-lowfeat@3-aug.pth"
+  result: "./result"
+
+DIR: "ckpt/"
