@@ -5,7 +5,14 @@
 2. ```
    cd data && tar -xvf Agriculture-Vision.tar.gz
    ```
-3. Files in data should look like
+3. Generate odgt files in data/ (if you want to use the provided odgts, skip this step)
+   ```
+   python gen_odgt.py -r data -d Agriculture-Vision/train -o data/agri-trn.odgt
+   python gen_odgt.py -r data -d Agriculture-Vision/val -o data/agri-val.odgt
+   python gen_odgt.py -r data -d Agriculture-Vision/test -o data/agri-test.odgt -t
+   head -n 100 data/agri-trn.odgt > data/agri-debug.odgt
+   ```
+4. Files in data should look like
     ```
     data
     |-- Agriculture-Vision
