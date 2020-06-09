@@ -39,10 +39,11 @@ python test.py --cfg config/agri-test.yaml
 ## Bibtex
 
 ```
-@inproceedings{yang2020CVPRW,
-  title={Reducing the feature divergence of RGB and near-infrared images using Switchable Normalization},
-  author={ {Siwei Yang, Shaozuo Yu, Bingchen Zhao} and Yin Wang},
-  booktitle={Proceedings of IEEE CVPR(2020) Workshop on Agriculture-Vision},
-  year={2020}
+@InProceedings{Yang_2020_CVPR_Workshops,
+author = {Yang, Siwei and Yu, Shaozuo and Zhao, Bingchen and Wang, Yin},
+title = {Reducing the Feature Divergence of RGB and Near-Infrared Images Using Switchable Normalization},
+booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+month = {June},
+year = {2020}
 }
 ```
