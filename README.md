@@ -47,3 +47,9 @@ month = {June},
 year = {2020}
 }
 ```
+
+## Contribution 
+
+Bingchen Zhao proposed the idea of measuring feature divergence between modalities which motivated this research and designed some of the experiments.
+Siwei Yang and Shaozuo Yu wrote most of the code and ran all the experiments to validate the idea.
+Yin Wang supervises this reseach and provide the resources used by this research.
